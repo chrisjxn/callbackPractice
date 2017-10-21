@@ -24,6 +24,10 @@ and what you should write is the sayHi function that makes the code above work,
 
   // Code Here
 
+  var first = (arr, cb) => {
+    return cb(arr[0]);
+  }
+
   
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
@@ -37,6 +41,9 @@ first(names, function(firstName){
 
   //Code Here
 
+  var last = (arr, cb) => {
+    return cb(arr[arr.length -1]);
+  }
 
 
 last(names, function(lastName){
@@ -50,6 +57,9 @@ last(names, function(lastName){
 
   //Code Here
 
+  var multiply = (num1, num2, cb) => {
+    return cb(num1 * num2);
+  }
 
 
 multiply(4, 3, function(answer){
@@ -64,6 +74,9 @@ multiply(4, 3, function(answer){
 
   //Code Here 
 
+  var contains = (array, name, cb) => {
+    return cb(array.includes(name));
+  }
 
 
 
@@ -82,7 +95,7 @@ contains(names, 'Colt', function(result){
 
   //Code Here
 
-
+  
 
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
@@ -93,7 +106,7 @@ uniq(names, function(uniqArr){
 
     //Code Here 
 
-
+   
 
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
